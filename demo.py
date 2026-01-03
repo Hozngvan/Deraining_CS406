@@ -21,12 +21,12 @@ st.set_page_config(page_title="Multi-Model Deraining Comparison", layout="wide",
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # ĐƯỜNG DẪN DATASET
-DATASET_PATH = "./../Test1200/Test1200" 
+DATASET_PATH = "./Test_image" 
 
 # DANH SÁCH MODELS
 MODEL_CONFIGS = {
     "MPRNet": {
-        "path": "./pretrained_models/model_epoch_80.pth", 
+        "path": "./pretrained_models/MPRNet_final.pth", 
         "class": MPRNet,
         "args": {},
         "pad_factor": 8
@@ -38,7 +38,7 @@ MODEL_CONFIGS = {
         "pad_factor": 8
     },
     "DRT (Transformer)": {
-        "path": "./pretrained_models/best_model_from_scratch.pt", 
+        "path": "./pretrained_models/DRT_final.pt", 
         "class": DRT_Inference_Wrapper,
         "args": {
             "dim": 96, 
