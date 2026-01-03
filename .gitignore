@@ -1,0 +1,9 @@
+# Ignore PyTorch model checkpoints
+*.pth
+*.pt
+
+__pycache__/
+*.pyc
+.env
+.DS_Store
+.pretrain_models/
